@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kr">  <!-- 검색엔진에 도움 줌(어떤 언어를 사용하는지)-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is my website" /> 
+    <!-- 웹사이트 설명(description) 이것과 title은 검색엔진에 유용하게 사용됨-->
+    <!-- meta 태그 
+    http-equiv="X-UA-Compatible" content="IE-edge" 는 인터넷익스플로를 위한 태그-->
+
+    <link rel="shortcut icon" 
+    sizes="16x16 32x32 64x64" 
+    href="https://nomadcoders.co/m.png"/>
+    <!-- 탭 창 아이콘 -->
+
+    <!-- meta태그 property="og:title" , property="og:image"
+    카톡에 링크 보내면 먼저 og:title 태그 찾음 (제목 타이틀)
+    카톡 미리보기에 보이는 이미지가 og:image 태그에 있는 이미지 
+    *트위터는 twitter:image , 페이스북은 fb:image * -->
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- 필요정보 구글링시 뒤에 mdn 붙여주기 html tag mdn -->
+    <p>2<sup>5</sup></p>
+
+    <form>
+        <!-- <input type="color" />
+        <input type="password" /> -->
+        
+        <!-- <input id="profile" type="file" accept=".pdf" />
+        <input required placeholder="Name" type="text" />
+        <input placeholder="Last Name" disabled type="text" />
+        <input required placeholder="User Name" type="text" />
+        <input required placeholder="PassWord" type="password" />
+        <input type="submit" value="버튼"/> -->
+
+
+        <!-- desabled 는 클릭 불가하게 함  
+             required 는 input 박스가 비워져있을시 알림 뜸 (필수항목)
+             minlength=""는 최소 글자수를 정해줌
+             type file의 경우 accept를 통해서 파일의 확장자를 정해줄 수 있음
+             image */의 경우 이미지파일 모두 가능 video도 동일
+            -->
+
+
+
+        <!-- <label for="profile">label 태그 input file연동</label> -->
+
+        <!--
+            label 태그는 input와 사용해야 작동됨
+            같이 사용하는 방법 = label태그는 for이라는 속성 적어주고
+            input은 id속성을 적어주고 동일하게 해야됨 for=id(동일이름)
+            label의 값을 클릭 시 input type file이 수행됨
+            
+          -->
+
+          <label for="website">Website</label>
+          <input id="website" required placehoder="name" type="range" /> 
+          <!-- type - url, email 등등 다양함 -->
+          <input required placehoder="name" type="date" /> 
+          <input type="submit" value="버튼" />
+          <!-- 엘리먼트당 id는 하나만 가질 수 있음 또한 다른 엘리먼트에 동일 아이디 쓰면 안됨 -->
+          
+
+    </form>
+
+
+</body>
+</html>
