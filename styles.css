@@ -1,0 +1,23 @@
+h1{
+    color: yellowgreen;
+    text-decoration-line: underline;
+    font-weight: 800;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    /* decoration-line 줄 , weight 굵기, style 효과(기울기) */
+
+}
+
+body{
+    background-color: white;
+    margin: auto; 
+}
+
+    /* inline 요소옆에 이어서 배치가능 block 는 요소옆에 이어서 배치 불가능 
+    block는 높이와 너비가 있고 inline은 높이 너비가 없음*/
+    /* collapsing margins 현상은 안쪽 박스와 바깥 박스의 경계선이 만나면
+    위 아래만 같은 margin 값을 갖게되는 현상이 생김 
+    겹치지 않게 하기위해선 padding을 사용해주면 됨 */
+
+
