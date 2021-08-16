@@ -9,15 +9,68 @@ h1{
 
 }
 
-body{
-    background-color: white;
+/* body{
+    background-color: whitesmoke;
     margin: auto; 
-}
+    padding: 20px;
+} */
 
     /* inline 요소옆에 이어서 배치가능 block 는 요소옆에 이어서 배치 불가능 
     block는 높이와 너비가 있고 inline은 높이 너비가 없음*/
     /* collapsing margins 현상은 안쪽 박스와 바깥 박스의 경계선이 만나면
     위 아래만 같은 margin 값을 갖게되는 현상이 생김 
     겹치지 않게 하기위해선 padding을 사용해주면 됨 */
+
+.tomato{
+    background-color: tomato;
+}
+.btn{
+    border-radius: 5px;
+}
+
+    /* inline-block는 요소 사이에 빈 공간이 있고 정해진 형식이 없음
+    단 사이즈 조절이 가능하고 block로 인식해서 옆에다 다른요소 두는 것 가능
+    창 크기가 달라지면 영향을 받음 주로 안쓰는 방법임 */
+
+body{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh; 
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+div{
+    position: fixed; 
+    /* postion: fixed는 화면을 드래그해도 동일한 위치에서 움직임x
+    처음 그려진 위치에서 고정됨 (다른박스 아래에 생성되서 고정하면 그상태로 유지)
+    위치는 코드를 수정해서 변경가능  */
+    width: 200px;
+    height: 200px;
+    background-color: teal;
+}
+
+/* flexbox는 어떤 곳이든 둘 수 있음 그리고 유연함 2차원 레이아웃에 잘 작동함
+
+단 규칙이 있음 자식 엘리먼트에는 어떤 것도 적지 말아야 함 부모 엘리먼트에만 가능
+부모 엘리먼트를 flex container로 만들어야 함 (부모 엘리먼트에 display:flex;)
+justify-content를 이용해 화면에 위치 지정하고 크기에 맞게 박스크기 조절 됨
+
+flexbox에서 주축인 main axis는 수평 교차축인 cross axis는 수직 (디폴트 값)
+justify-content는 주축 위에서 움직임
+align-items는 교차축 위에서 움직임 (stretch는 height값이 없어야 적용됨)
+
+flex-direction을 이용하여 수평과 수직을 변경가능 flex의 디폴트는 row(수평)
+column값으로 바꾸면 aligh-items의 효과는 주축에 적용됨
+
+자식 엘리먼트안에 요소가 들어갈 때 display:flex를 이용해서 요소위치 변경가능
+부모 안에 부모 그리고 자식이 생기는 것
+
+wrap를 nowrap로 하면 요소가 아래로 내려가지 않음 wrap로 하면 화면크기에 맞게 내려감
+row-reverse는 순서가 123이 아닌 321로 가도록 하고 row와 column을 수직 수평 정할 수 있음
+wrap와direction둘다 이용가능
+*/
+
 
 
