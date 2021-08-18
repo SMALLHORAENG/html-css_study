@@ -31,7 +31,7 @@ h1{
     /* inline-block는 요소 사이에 빈 공간이 있고 정해진 형식이 없음
     단 사이즈 조절이 가능하고 block로 인식해서 옆에다 다른요소 두는 것 가능
     창 크기가 달라지면 영향을 받음 주로 안쓰는 방법임 */
-
+/* 
 body{
     margin: 20px;
     display: flex;
@@ -40,16 +40,33 @@ body{
     height: 100vh; 
     flex-direction: column;
     flex-wrap: nowrap;
-}
-div{
-    position: fixed; 
+} */
+div{ 
+    /* position: fixed; */
     /* postion: fixed는 화면을 드래그해도 동일한 위치에서 움직임x
     처음 그려진 위치에서 고정됨 (다른박스 아래에 생성되서 고정하면 그상태로 유지)
     위치는 코드를 수정해서 변경가능  */
-    width: 200px;
-    height: 200px;
-    background-color: teal;
+
+    /* position: ; */
+
+    width: 150px;
+    height: 150px;
+    background-color: wheat;
 }
+
+/* .green{
+    position: absolute;
+    /* relative는 처음 정해진 element를 기준으로 이동가능 
+    absolute의 경우는 가장 가까운 relative(부모)를 기준으로 옮겨짐
+    div가 아닌 body를 기준으로 옮겨지는 상황임(부모를 position 안했기 때문)*/
+
+   /* top: 0px;
+    left: 0px;
+    background-color: wheat;
+    height: 100px;
+    width: 100px;
+} */
+
 
 /* flexbox는 어떤 곳이든 둘 수 있음 그리고 유연함 2차원 레이아웃에 잘 작동함
 
@@ -71,6 +88,106 @@ wrap를 nowrap로 하면 요소가 아래로 내려가지 않음 wrap로 하면 
 row-reverse는 순서가 123이 아닌 321로 가도록 하고 row와 column을 수직 수평 정할 수 있음
 wrap와direction둘다 이용가능
 */
+
+
+
+/* div:first-child{
+    background-color: tomato;
+}
+
+div:last-child{
+    background-color: teal;
+} */
+
+
+
+/* span:nth-child(2){
+    background-color: teal;
+}
+span:nth-child(4){
+    background-color: teal;
+} */
+
+/* span:nth-child(odd) {
+    background-color: teal;
+} */
+
+/* span:nth-child(2n+1){
+    background-color: teal;
+} */
+/*  pseudo selectors / class , id 를 만드는 방법보다 좋음
+    even은 짝수를 의미함 반대로 odd는 홀수를 의미함
+    2n+1의 경우 2개째마다 바뀜(3n+1은 3개째) */
+
+
+
+
+/* span{
+    color: tomato;
+    background-color: yellowgreen ;
+} */
+
+/* div > span{
+    text-decoration-line: underline;
+    background-color: yellowgreen;
+} */
+
+/* p span{
+    color: teal;
+} */
+
+/* div p span{
+    color: teal;
+}
+
+p + span{
+    color: blue;
+    text-decoration-line: underline;
+} */
+
+/* Combinators 클래스(부모안에 있는 자식) 
+   div p span은 div안에 p안에 span을 의미하고
+   div > span은 바로아래 자식에게만 적용할 때 사용함 div속에 span이 두개인 경우 사용
+   >가 아닌 +는 다음 것 지정 div > span은 바로 밑 자식 +는 다음 형제느낌
+   형제 바로 뒤 오지않으면 +는 적용 안됨
+   그래서 나온것이 "~" 형제와 형제관계 바로 뒤에 올 필요없음
+   */
+
+
+    
+/* input:required{
+    border: 1px solid tomato;
+}
+input:optional{
+    border: 1px solid wheat;
+}  */
+
+input{
+    border: 1px solid wheat;
+}
+input:required{
+    border-color: tomato; 
+}
+
+input[type="password"] {
+    background-color: thistle;
+}
+
+input[placeholder~="name"]{
+    background-color: pink;
+}
+
+/*  pseudo selector 두번째
+    required는 input에서 사용하고 input에 넣어줘서 필수 요소로 지정
+    optional은 비어있어도 채워져있어도 동일한 상태
+
+    attribute를 통해 input에서 type가 password인 모든 element에 background-color 적용
+    type를 placeholder로 바꿔도 적용됨
+
+    ~=의 경우 "name"이 placeholder에 포함되면 배경 색 바꿈 
+    $=의 경우는 뭐뭐로 끝나는 경우
+*/
+
 
 
 
