@@ -162,7 +162,7 @@ input:optional{
     border: 1px solid wheat;
 }  */
 
-input{
+/* input{
     border: 1px solid wheat;
 }
 input:required{
@@ -175,9 +175,9 @@ input[type="password"] {
 
 input[placeholder~="name"]{
     background-color: pink;
-}
+} */
 
-/*  pseudo selector 두번째
+/*  pseudo selector 두번째  <의사 클래스 (의사코드)
     required는 input에서 사용하고 input에 넣어줘서 필수 요소로 지정
     optional은 비어있어도 채워져있어도 동일한 상태
 
@@ -189,5 +189,86 @@ input[placeholder~="name"]{
 */
 
 
+
+/* button:active{
+    background-color: tomato;
+}
+button:hover{
+    background-color: tomato;
+}
+button:focus{
+    background-color: tomato;
+}
+
+a:visited{
+    color: tomato;
+} */
+
+/* form{
+    border: 1px solid teal;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+form:focus-within{
+    border-color: turquoise;
+} */
+
+/* form:hover input{
+    background-color: hotpink;
+} */
+
+/* form:hover input:focus{
+    background-color: teal;
+} */
+
+/* state
+    active(버튼 클릭하고 있을 때 배경색 가짐) 
+    hover(마우스가 올라가면 바뀜 - 배경색과 기존 모양)
+    focus(키보드로 선택 됐을 때 배경색 가짐)
+    visited( *링크에만 적용 됨* 클릭한 링크의 색 바꿈)
+
+    focus-within(은 focused인 자식을 가진 부모 element에 적용됨)
+
+    state는 다른 엘리먼트와도 연계 가능한데 방법은
+    form:hover input{ form이 hover하면 input를 {}안에 있는 내용적용 }
+    단 form안에 input이 있어야 함
+
+    두번째 연계방법
+    form:hover input:focus{ 위 내용과 다르게 form안에 input이 focus되면 적용됨 }
+    * hover도 있기 때문에 마우스도 안에 들어가야 적용 됨 즉 조건이 3개 *
+*/
+
+
+
+    input::placeholder{
+        color: yellowgreen;
+    }
+
+    p::selection{
+        color: teal;
+        background-color: yellowgreen;
+    }
+    p::first-letter{
+        background-color: yellow;
+        color: teal;
+    }
+
+    /*  Recap
+        ::placeholder는 placeholder을 스타일 할 수 있도록 해줌
+        ::을 넣어주면 스타일 해줄 수 있음
+
+        selection
+        드래그해서 선택하면 안에있는 옵션값으로 바뀜 ex)background-color: yellow
+
+        ::first-letter
+        첫번째 글자만 스타일을 해줄 때 사용
+
+        ::first-line
+        첫째줄에 적용되는 스타일
+    */
+
+
+    
 
 
