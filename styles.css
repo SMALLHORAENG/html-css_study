@@ -9,11 +9,16 @@ h1{
 
 }
 
-/* body{
-    background-color: whitesmoke;
+body{
+    /* background-color: whitesmoke;
     margin: auto; 
-    padding: 20px;
-} */
+    padding: 20px; */
+
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
 
     /* inline 요소옆에 이어서 배치가능 block 는 요소옆에 이어서 배치 불가능 
     block는 높이와 너비가 있고 inline은 높이 너비가 없음*/
@@ -288,6 +293,120 @@ form:focus-within{
 
 
 
+    /* a{
+        color: wheat;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: large;
+        transition: all 1s cubic-bezier(0.785, 0.135, 0.150, 0.860)
+        ,border-radius 5s ease-in-out;
+    }
+    a:hover{
+        border-radius: 5px;
+        color: tomato;
+        background-color: wheat;
+    }
+
+    img{
+        border: 5px solid black;
+        border-radius: 50%;
+        /* transform: rotateY(80deg) rotateX(20deg) rotateZ(10deg);
+        transform: scale(2,2);
+        transform: translateX(-60px); */
+        /* transition: transform 2s ease-in-out; 
+    }
+
+    img:hover{
+        transform: rotateY(360deg) scale(0.5);
+    } */
+
+    /* Transitions 
+    hover(state)가 없는 곳에 써야함 - root에 있어야 함 원래 element
+    background-color가 변하는 부분이기 때문에 transition부분을 동일하게 한 것
+    transition: background-color 10s ease-in-out ,color 5s ease-in-out;
+    위와같이 background-color과 color둘 모두에게 효과를 각 각 줄수가 있음
+    all을 이용해 모두 다 변하게 할 수 있음 
+    ( 효과를 주고싶은 값은 state인 hover안에 
+    root인 element와 같은 property를 넣어줘야 함 
+    ex. color에 효과 적용시 state 안에도 color이 들어가야 함 )
 
 
+    part two
+    else-in-out는 else-in function 애니메이션이 어떻게 변할지 알려주는 것
+    디폴트 값으로는 linear, ease-in, ease-in-out, ease-out, ease
+    ( https://matthewlein.com/tools/ceaser 애니메이션 주소)
+    cubic-bezier(?.???, ?.???, ?.???, ?.???); 를 이용하여 나만의 애니메이션 생성ㅇ
     
+    Transformations (transform mdn)
+    transform: rotateY(80deg)는 3D로 80도 돌렸다는 의미 X와Z도 돌릴 수 있음
+    scale의 경우는 X와Y의 값을 정해서 크기를 배로 키우게 가능
+    translate의 경우 X와Y 값을 정해서 위치 변동이 가능한데 margin padding의 영향X
+    state와 함께쓰면 효과가 둘 다 함께 적용됨
+    Transitions와 함께쓰면 더욱 좋은효과 낼 수 있음
+    */
+
+
+/* 
+    @keyframes CoinFlip{
+        from{
+            transform: rotateX(0);
+        }
+        to{
+            transform: rotateX(360deg) translateX(100px);
+        }
+    } */
+    img{
+        border: 10px solid black;
+        border-radius: 50%;
+        animation: CoinFlip 5s ease-in-out;
+        opacity: 0px;
+        }
+
+    @keyframes CoinFlip{
+        0%{
+            transform: rotateX(0);
+        }
+        25%{
+            transform: scale(2);
+        }
+        50%{
+            transform: rotateX(360deg) translateX(100px);
+            border-radius: 0px;
+            border-color: tomato;
+        }
+        75%{
+            transform: scale(5);
+            border-radius: 20px;
+
+        }
+        100%{
+            transform: rotateX(0) translateX(0);
+        }
+    }
+
+    /*Animation (https://animista.net/)
+    
+    @keyframes CoinFlip{
+        from{
+            transform: rotateX(0);
+        }
+        to{
+            transform: rotateX(360deg);
+        }
+    }
+    0부터 360도까지 돌게됨, CoinFlip라는 애니메이션 이름 정함
+        img{
+        border: 10px solid black;
+        border-radius: 50%;
+        animation: CoinFlip 5s ease-in-out;
+    }
+    animation 을 5초간 실시함 마우스를 올리지 않아도 페이지가 로드되면 자동
+    + infinite를 이용시 5초간 실행된 것 계속 재생됨
+
+    form과 to를 없애고 0 50 100 퍼센트로 하면 시작 중간 끝 나뉨
+    */
+
+
+
