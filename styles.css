@@ -1,24 +1,25 @@
-h1{
+/* h1{
     color: yellowgreen;
     text-decoration-line: underline;
     font-weight: 800;
     font-size: 20px;
     font-style: italic;
-    text-align: center;
+    text-align: center; */
     /* decoration-line 줄 , weight 굵기, style 효과(기울기) */
 
 }
 
-body{
-    /* background-color: whitesmoke;
+/* body{
+    background-color: whitesmoke;
     margin: auto; 
     padding: 20px; */
 
-    display: flex;
+    /* display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
-}
+    flex-direction: column;
+} */
 
     /* inline 요소옆에 이어서 배치가능 block 는 요소옆에 이어서 배치 불가능 
     block는 높이와 너비가 있고 inline은 높이 너비가 없음*/
@@ -26,12 +27,12 @@ body{
     위 아래만 같은 margin 값을 갖게되는 현상이 생김 
     겹치지 않게 하기위해선 padding을 사용해주면 됨 */
 
-.tomato{
+/* .tomato{
     background-color: tomato;
 }
 .btn{
     border-radius: 5px;
-}
+} */
 
     /* inline-block는 요소 사이에 빈 공간이 있고 정해진 형식이 없음
     단 사이즈 조절이 가능하고 block로 인식해서 옆에다 다른요소 두는 것 가능
@@ -46,7 +47,7 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
 } */
-div{ 
+/* div{  */
     /* position: fixed; */
     /* postion: fixed는 화면을 드래그해도 동일한 위치에서 움직임x
     처음 그려진 위치에서 고정됨 (다른박스 아래에 생성되서 고정하면 그상태로 유지)
@@ -54,10 +55,10 @@ div{
 
     /* position: ; */
 
-    width: 150px;
+    /* width: 150px;
     height: 150px;
     background-color: wheat;
-}
+} */
 
 /* .green{
     position: absolute;
@@ -357,23 +358,26 @@ form:focus-within{
             transform: rotateX(360deg) translateX(100px);
         }
     } */
-    img{
+    /* img{
         border: 10px solid black;
         border-radius: 50%;
-        animation: CoinFlip 5s ease-in-out;
-        opacity: 0px;
-        }
 
-    @keyframes CoinFlip{
+        animation: CoinFlip 5s ease-in-out infinite;
+        /* animation-iteration-count: infinite; */
+
+        /* opacity: 0px;
+        } */
+
+    /* @keyframes CoinFlip{
         0%{
-            transform: rotateX(0);
+            transform: rotateY(0);
         }
         25%{
             transform: scale(2);
+            border-radius: 0px;
         }
         50%{
-            transform: rotateX(360deg) translateX(100px);
-            border-radius: 0px;
+            transform: rotateY(180deg) translateY(100px);
             border-color: tomato;
         }
         75%{
@@ -382,9 +386,9 @@ form:focus-within{
 
         }
         100%{
-            transform: rotateX(0) translateX(0);
+            transform: rotateY(0) translateY(0px);
         }
-    }
+    } */
 
     /*Animation (https://animista.net/)
     
@@ -408,5 +412,86 @@ form:focus-within{
     form과 to를 없애고 0 50 100 퍼센트로 하면 시작 중간 끝 나뉨
     */
 
+
+
+    /* div{
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+        
+    } */
+    /* @media screen and (min-width: 650px) and (max-width: 750px)*/
+    /* @media screen and (max-width:600px){
+        div{
+            background-color: tomato;
+        }
+    } */
+    /* @media screen and (min-device-width:601px) and (max-width:1200px)
+    and (orientation : landscape){
+        div{
+            background-color: wheat;
+        }
+    }
+    span{
+        font-size: 36px;
+    }
+    @media screen and (orientation : landscape){
+        span{
+        display: none;
+        }
+    } */
+    /* @media screen and (min-width:1200px){
+        div{
+            background-color: turquoise;
+        }
+    } */
+
+    /* Media Queries(media query)
+    @media screen and (max-width: 400px){}는 화면크기가 400px보다 작을시 라는 조건
+    @media screen and (min-width: 650px) and (max-width: 750px)
+    위 조건은 650px~750px의 width값을 가질 시 적용되는 조건
+
+    (orientation : landscape) 이 조건은 세로모드인지 가로모드인지 구별가능
+    landscape는 가로모드, portrait는 세로모드 (가로세로 감지)
+    뷰포트 즉 보이는 상태를 감지
+
+    span{
+        font-size: 36px;
+    }
+    @media screen and( orientation : landscape){
+        span{
+        display: none;
+        }
+    }
+    span의 폰트는 36px이고 screen이 가로로 감지되면 span의 display는 none가 된다
+    (span을 보여주지 않는다 즉 텍스트가 보이지 않음)
+
+    and를 쓰고 꼭 띄워주자(조건과 and를 꼭 띄워서 써줘야 인식잘됨) 
+    크롬 우클릭 후 검사를 눌러 핸드폰 화면테스트가 가능하다
+    좌측상단 스마트폰 모양버튼 눌러서 사용
+    
+    and는 값이 참이라면 실행시켜줌, element에 css를 적용해줘야 함
+    예를들어 위 코드에 span{display: none;}에 span이 없으면 안된다는 소리
+    and를 이용하여 조건을 연결함
+    media query는 핸드폰에만 적용됨 브라우저는 이해하지 못함
+    min-device-width로도 사용이 가능함
+    Css media query Mdn를 검색해서 이용 가능한 query 탐색 */
+
+    /* @media print{
+        body{
+            background-color: tomato;
+        }
+    } */
+
+    /*
+    *aspect-ratio를 이용하여 스크린과 레티나 디스플레이 구분 아이폰과 Mac Os*
+    레티나 디스플레이면 더 나은 퀄리티의 화면 보여줄 수 있음
+
+    *media type*
+    screen 말 그대로 스크린(화면)
+    print  인쇄할 때 적용되는 옵션 (배경 그래픽 선택시 변경된 것 보임)
+
+    여기까지가 이론공부 이후는 실제 클론코딩
+    */
 
 
