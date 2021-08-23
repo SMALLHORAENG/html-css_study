@@ -5,9 +5,9 @@
     font-size: 20px;
     font-style: italic;
     text-align: center; */
-    /* decoration-line 줄 , weight 굵기, style 효과(기울기) */
+    /* decoration-line 줄 , weight 굵기, style 효과(기울기) 
 
-}
+} */
 
 /* body{
     background-color: whitesmoke;
@@ -531,8 +531,7 @@ form:focus-within{
     (Summary (required)라는 부분이 타이틀)
     커밋 후 publish 누르면 github에 저장됨
 
-    기본적으로 README.md 파일을 github에서 보여주게 됨(대문 느낌)
-    
+    기본적으로 README.md 파일을 github에서 보여주게 됨(대문 느낌)    
     */
 
 
