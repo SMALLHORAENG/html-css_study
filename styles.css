@@ -527,8 +527,12 @@ form:focus-within{
 
     github desktop보면 파일 수정된 것 확인가능
     publish (게시)
-    
+    commit 할 땐 반드시 타이틀이 필요함
+    (Summary (required)라는 부분이 타이틀)
+    커밋 후 publish 누르면 github에 저장됨
 
+    기본적으로 README.md 파일을 github에서 보여주게 됨(대문 느낌)
+    
     */
 
 

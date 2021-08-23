@@ -1,3 +1,3 @@
 # KoKoa Clone 2020 Update
 
-CSS got so much better!
+Html & Css 연습 (이론설명 + 클론코딩)
