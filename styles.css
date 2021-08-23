@@ -532,6 +532,10 @@ form:focus-within{
     커밋 후 publish 누르면 github에 저장됨
 
     기본적으로 README.md 파일을 github에서 보여주게 됨(대문 느낌)    
+    
+    .gitignore 파일안에 .DS_Store와 같은 파일명을 적을시 무시됨
+    폴더는 /screenshots 처럼 적으면 무시됨
+    (github에 올리기를 원치 않을 시)
     */
 
 
