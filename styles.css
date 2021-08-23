@@ -491,7 +491,37 @@ form:focus-within{
     screen 말 그대로 스크린(화면)
     print  인쇄 미리보기 화면에 표시됨 (배경 그래픽 선택시 변경된 것 보임)
 
-    여기까지가 이론공부 이후는 실제 클론코딩
+    /* GIT, GITHUB
+    git를 사용시 파일의 변경내용을 확인 가능함 
+    git은 파일을 binary format으로 인식 (0010101010001)
+    git은 파일을 게속 추적하는것
+
+    github는 변경내용을 업로드
+    git은 파일의 변경내용 계속 추적해주는 version control system이고
+    github는 파일 내용과 파일들을 올려주는 공간
+    git-scm.com을 들어가서 다운로드 가능
+
+    github Repository(Repositories) 저장소
+    내 코드를 넣을 폴더 코드의 변경내역과 히스토리 갖고 있는 폴더
+    private는 비공개 public는 공개
+    history를 통해서 파일의 변경정보 확인가능
+    commit는 시점을 의미 (저장을 한 시점)
+    이전코드는 빨간색의 배경을 하고 -표시된 코드
+    변경된 코드는 초록색 배경을 하고 +표시된 코드
+    commit이름을 정해서 저장해줘도 좋음(기록에 남기때문)
+    
+
+
     */
+
+
+
+   /*여기까지가 이론공부 이후는 실제 클론코딩*/
+
+
+   
+
+
+
 
 
