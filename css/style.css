@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+body{
+    /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family:'Rampart One', cursive;
+    background-color: tomato;
+}
+
+.statusbar{
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+
+}
+
+.statusbar__column {
+    width: 33%;
+}
+
+.statusbar__column:first-child span{
+    margin-right: 5px;
+}
+
+.statusbar__column:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+.statusbar__column:last-child{
+    display: flex;
+    justify-content:  flex-end;
+    align-items: center;
+}
+
+.statusbar__column .fa-battery-three-quarters{
+    margin:0px 3px;
+}
+
+/*  6.5
+        모두 상단에 위치위해 display:flex;
+        각자 위치를 나눠주기위해 justify-content: space-between;
+        아이콘 간격을 주기위해 margin-right
+        *div가 제대로 감싸주고 있는지 확인하기*
+        
+        new property
+        font-family:-apple-system ~~ (텍스트 폰트변경)
+        <google font 들어가서 css에 쓸 폰트 찾기>
+        @import url 하여 사용하기 (맨 위에 넣어줄 것)
+        rules to specify families 를 보고 넣어주기
+        *모든 폰트를 넣어주면 무거워짐 필요한거만 추가*
+
+        css hack(기술)
+        마치 레시피 같은 것 좀 이상할 수 있지만 어디서든
+        사용이 가능함
+        statusbar__column의 width를 33%로 만들고
+        nth-child(2)(두번째 자식)을 center 가운데로
+        last-child(마지막인 세번째 자식)을 마지막으로
+        그리고 중앙정렬 시켜주면 배치는 끝남
+        statusbar__column 하고 아이콘의 주소인
+        fa-battery-three-quarters를 자식으로 넣어주고
+        margin을 주면 아이콘 간격까지 주는게 끝남
+        fas는 무료 아이콘의 스타일 접두사
+        (아이콘마다 사용하는 접두사 다른경우 있음 주의)
+
+        FontAwesome
+        FontAwesome 에 아이콘 크게 만드는 class 있음
+        아이콘 주소 뒤 fa-2x, fa-lg 해주면 사이즈 커짐
+        lg는 라지, 2x는 두배 (아이콘 클래스이름)
+*/
+
