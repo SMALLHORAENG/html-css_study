@@ -40,14 +40,14 @@
         </p>
     </header>
 
-    <form id="login-form">
-        <input type="text" placeholder="Email or phone number"/>
-        <input type="password" placeholder="Password" />
+    <form action="friends.html" method="GET"id="login-form">
+        <input name="username" type="text" placeholder="Email or phone number"/>
+        <input name="password" type="password" placeholder="Password" />
         <input type="submit" value="Login" />
         <a href="#">Find KoKoa Account or Password</a>
     </form>
 
-        
+
 
 <script src="https://kit.fontawesome.com/6478f529f2.js"
 crossorigin="anonymous">
@@ -103,3 +103,24 @@ crossorigin="anonymous">
             css 링크를 걸때 link:css 엔터치면 양식나옴
 -->
 
+<!-- 6.9 / Form
+            2가지 속성(attribute) 갖고있음
+            1. action
+            어떤 페이지로 data를 보낼건지 지정할 수 있음
+
+            2. method   
+            데이터 보내는 방식
+            2가지 방식중 한가지 가능     
+            하나는 Post
+            post는 백엔드 서버에 정보를 전송하는 방식
+            두번째는 Get
+            get은 보안에 취약함
+            *username과 password는 get방식으로 보내면 안됨
+            URL에 포함되도 상관없는 것들을 Get방식으로 사용
+            구글의 검색 등등에 사용되는것이 Get방식
+            (검색한 것 URL에 표시됨)
+            서버 없기때문에 GET방식을 사용
+
+            required이 필요하면 써주면 됨
+            (필수값, 적지않을시 경고가 뜨는 속성)
+--> 
