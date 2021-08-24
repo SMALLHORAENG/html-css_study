@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import "reset.css";
 @import "statusbar.css";
-
+@import "variables.css";
 
 body{
     /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family:'Rampart One', cursive;
-    background-color: tomato;
+    /* background-color: tomato; */
 }
+
+/* 6.6 */
 
 .welcome-header{
     margin-top:93px;
@@ -30,7 +32,49 @@ body{
     font-size: 400;
 }
 
-/*  Header
+/* 6.7 */
+#login-form{
+    display: flex;
+    flex-direction: column;
+    margin:0px 30px;
+    /* color: var(--yellow); */
+}
+
+#login-form input{
+    border: none;
+    padding: 15px 0px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+#login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder{
+    color: rgba(0,0,0,0.4);
+}
+
+#login-form input:focus{
+    border-color: var(--yellow);
+}
+
+#login-form input[type="submit"]{
+    background-color: var(--yellow);
+    cursor: pointer;
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+
+#login-form a{
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+}
+
+/*  6.6 Header
         page ruler redux라는 확장 프로그램 이용
         페이지의 사이 공간을 정확하게 측정할 수 있음
 
@@ -47,4 +91,95 @@ body{
         -> font-width: 600; 등 사이즈 찾아서 수정
         (단 지원하는 사이즈인지 확인필요)
         현재 사용중인 폰트는 400의 사이즈가 최대
+*/
+
+/* 
+    6.7 Login Form
+        part one
+        위치가 아래로 지정되야하고 이동하면 안되기 때문에
+        flex 와 flex-direction을 이용해서 column형식으로
+        만들어줌
+
+        border:none 를 통해서 겉의 선 제거
+        boder-bottom을 통해서 아래에 선 생성 후
+        색은 rgba를 이용해 선을 회색처럼 보이게 수정
+
+        #login-form input::placeholder를 통해
+        placeholder을 꾸며줌 color: rgba를 통해 
+        글씨 색 수정 (pseudo element)
+
+        -> reset.css로 들어가서
+        input:focus{
+            outline: none;
+        } 를 적어줌
+        input 박스가 focus되면 outline 안뜸(없어짐)
+
+        COlorZilla 익스텐션을 통해 홈페이지 색 값 찾기
+
+        variables.css 파일 생성
+        :root{
+        --yellow: #fae100;
+        } 코드 넣어준 뒤 import
+        (yellow라는 값을 var을 통해서 사용)
+
+        input가 focus되면 border-color이
+        --yellow의 값으로 0.3초의 시간을 거쳐 바뀜
+        transition: border-color 0.3s ease-in-out;
+
+        1.linear :전환(transition)효과가 처음부터 끝까지 
+        일정한 속도로 진행됩니다.
+
+        2.ease : 기본값으로, 전환(transition)효과가 
+        천천히 시작되어, 그다음에는 빨라지고, 
+        마지막에는 다시 느려집니다.
+
+        3.ease-in:전환(transition)효과가 천천히 시작됩니다.
+
+        4.ease-out:전환(transition)효과가 천천히 끝납니다.
+
+        5.ease-in-out :전환(transition)효과가 천천히 시작되어
+        , 천천히 끝납니다.
+
+        6.cubic-bezier(n,n,n,n):전환(transition)효과가 
+        사용자가 정의한 cubic-bezier 함수에 따라 진행됩니다
+*/
+
+/*  6.8 LoginForm
+        part two
+        6.7에서 적용된 input:focus는
+        input인 login버튼도 적용되서 border부분이
+        색깔이 변하게 됨
+        이걸 바꿔주는것이 Not속성
+
+        Not
+        뭔가가 적용되는 걸 원하지 않을 때
+
+        #login-form input:not([type="submit"]) {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        transition: border-color 0.3s ease-in-out;
+        }
+        input type이 submit이 아닐때 []안에 들어가는건
+        특성 선택자(attribute selector)
+        []안에 들어가는 특성 선택자를 제외한 곳에
+        (login-form의 input 중에서)
+        border-bottom과 transition의 설정이 적용됨
+
+        Submit
+        버튼 스타일
+        #login-form input[type="submit"]{
+        background-color: var(--yellow);
+        cursor: pointer;
+        }
+        버튼색(background-color) --yellow
+        마우스커서(cursor) :pointer (포인터)
+                        not-allowed (금지표시판 표시)
+                        progress (클릭후 로딩표시)
+              
+        a(link) - anchor
+        color: inherit;
+        (부모로부터 색을 상속받는것 의미)
+        영어로 inheritance는 아버지가 돌아가시고 남긴것 의미
+        이 경우는 색을 아버지에게 상속받아 오는 것
+        (기본값은 검정색)
+
 */
