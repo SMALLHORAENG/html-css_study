@@ -1,0 +1,17 @@
+.nav{
+    background-color: #f9f9fa;
+    padding: 20px 40px;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-between ;
+}
+
+/* 6.10
+    justify-content: space-between
+    기본 축을 따라 정렬 컨테이너 내에서 고르게 분포됨
+    인접한 항목의 각 쌍 사이의 간격 동일
+    첫 번째 항목은 메인 시작 모서리와 같은 높이이고 
+    마지막 항목은 메인 끝모서리와 같은 높이
+*/
