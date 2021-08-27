@@ -1,12 +1,23 @@
 .nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #f9f9fa;
-    padding: 20px 40px;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(121,121,121,0.3);
+  
 }
 
 .nav__list{
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between ;    
 }
+
+.nav__link{
+    color: #2e363e;
+}
+
 
 /* 6.10
     justify-content: space-between
@@ -14,4 +25,27 @@
     인접한 항목의 각 쌍 사이의 간격 동일
     첫 번째 항목은 메인 시작 모서리와 같은 높이이고 
     마지막 항목은 메인 끝모서리와 같은 높이
+*/
+
+/* 6.11
+    FontAweSome 에서 Documentation로 가서 size 얼마나 있는지 확인(sizing icons 클릭)
+    (Doc For Web 메뉴에서 확인가능)
+    icon 사이즈 2x로 키우기
+
+    reset.css 에서 
+    a{ color:inherit;
+        text-decoration: none;}
+    모든 링크의 색은 부모로 상속받고 밑줄등은 없앤다
+
+    position: fixed 와 bottom: 0;을 하면
+    화면을 드래그해도 하단에 고정되게 된다
+    거기에 width: 100%를 주면 width가 좌우 전체로 채워지고
+    추가로 box-sizing: border-box를 해주므로
+    아이콘들이 밖으로 나가지 않고 채워지게 된다
+
+    style.css 에 height:1000vh를 body에 넣어준다
+*/
+
+/* 
+
 */
