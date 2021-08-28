@@ -19,6 +19,8 @@
 }
 
 
+
+
 /* 6.10
     justify-content: space-between
     기본 축을 따라 정렬 컨테이너 내에서 고르게 분포됨
@@ -46,6 +48,20 @@
     style.css 에 height:1000vh를 body에 넣어준다
 */
 
-/* 
+/*  6.12
+    Css box
+    padding을 설정해주면 그 값만큼 박스의 범위가 좁아짐
+    50px를 padding 해주게 됐을 때 박스의 공간
+    200px의 박스를 만들면 content를 위한 공간은 150px가 되는 것
+    하지만 width를 적용해줄시 content를 위한 공간은 width에 맞게
+    적용된다 즉 width200px + padding 50px = 250px
+    하지만 width 미적용 200px의 박스가 padding 50px 하면
+    content를 위한 공간은 150px의 박스 공간이 된다 
 
+    width: 100%; 는 스크린 전체를 채운다는 의미
+    200px의 박스를 생성한 뒤
+    box-sizing: border-box는 , padding 50px가 되면
+    박스의 content 부분이 150px가 되는데 이렇게 되도
+    상관이 없다는 설정(box 사이즈가 커지길 원치않음)
+    *박스의 사이즈 늘리기를 원치 않는다*
 */
