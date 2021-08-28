@@ -11,11 +11,29 @@
 
 .nav__list{
     display: flex;
-    justify-content: space-between ;    
+    justify-content: space-between ;
+        
 }
 
-.nav__link{
+.nav__btn{
+    position: relative;
     color: #2e363e;
+}
+
+.nav__notification {
+    background-color: tomato;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    left: 15px;
+    top: -10px;
+    bottom: 15px;
 }
 
 
@@ -64,4 +82,17 @@
     박스의 content 부분이 150px가 되는데 이렇게 되도
     상관이 없다는 설정(box 사이즈가 커지길 원치않음)
     *박스의 사이즈 늘리기를 원치 않는다*
+*/
+
+/* 6.13
+    chat icon 위에 span 생성
+    <span class="nav__notification">1</span>
+    이후 class를 css파일에서 설정
+    
+    box의 절반값으로 radius를 주면 원이 됨
+    
+    position: absolute, position: relative 를 이용하여
+    알림표시를 만들 수 있는데 이는
+    relative가 부모이고 absolute는 자식으로
+    위치를 relative기준으로 자유롭게 위치 이동 설정가능
 */
