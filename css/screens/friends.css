@@ -1,0 +1,21 @@
+#friends-display-link{
+    text-align: center;
+    display: block;
+    background-color: #fafafa;
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+#friend-display-link i{
+       color: rgba(0, 0, 0, 0.3);      
+}
+
+/* 6.15
+       html 파일에는 <a>를 통해서 작성하고
+       id를 이용해서 만들어준다
+
+       friends.css 파일을 생성한 뒤 위와같이 작성해준다
+
+       style.css 파일에 body에서 폰트의 색상을 nav-bar에서 가져와 동일하게 해줌
+*/
+

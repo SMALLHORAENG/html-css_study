@@ -1,0 +1,46 @@
+.user-component {
+    display: flex;
+}
+
+.user-component,
+.user-component__column:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.user-component__avatar{
+    width:70px;
+    height: 70px;
+    border-radius: 27px;
+    margin-right: 20px;
+}
+
+.user-component__title{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.user-component__subtitle{
+    margin-top: 8px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* 6.16
+    img 큰 사이즈 80x80, 작은 사이즈 60x60
+
+    user-component__column은 img와 text의 flex설정된 부모요소
+
+    .user-component,
+    .user-component__column:first-child
+    이렇게 하면 두 클래스 모두에 효과가 적용됨
+
+    component는 2개의 column을 가진 div임 
+    둘다 display:flex, align-items: center 적용되있음
+    첫번쨰  column에는 img와 text가 있음
+
+    만드는 subtitle은 다른 스크린 작업 때 사용을 위해 만듦
+    (반복되는 것들을 component로 만들면 작업이 쉬워지기 때문)
+    *개인적으로 상태메시지처럼 이용해도 될 것 같음*
+*/

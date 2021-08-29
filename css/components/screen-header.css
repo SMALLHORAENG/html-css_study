@@ -1,0 +1,27 @@
+.screen-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.screen-header__title{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.screen-header__icons span {
+    margin-left: 25px;
+}
+
+
+
+/* 6.14 
+        font-weight: 600을 통해 글씨를 굵게 만들어줌
+        *코드가 적용이 안된다면 먼저 잘못 쓴 텍스트가 없는지 확인해라*
+*/
+
+/* 6.15
+        
+
+*/

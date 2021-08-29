@@ -1,4 +1,4 @@
-hello this is friends.
+<!-- hello this is friends. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +35,34 @@ hello this is friends.
         </div>
     </div>
 
+        <header class="screen-header">
+            <h1 class="screen-header__title">Friends</h1>
+            <div class="screen-header__icons">
+                <span><i class="fas fa-search fa-lg"></i></span>
+                <span><i class="fas fa-music fa-lg"></i></span>
+                <span><i class="fas fa-cog fa-lg"></i></span>
+            </div>
+        </header>
+
+        
+        <a id="friends-display-link">
+            <i class="fas fa-info-circle"></i> 
+            Friends' Names Display
+            <i class="fas fa-chevron-right fa-xs"></i>
+        </a>
+
+        <div class="user-component">
+            <div class="user-component__column">
+                    <img class="user-component__avatar" 
+                    src="https://img.theqoo.net/img/BtLGd.jpg" />
+                <div class="user-component__text">
+                    <h4 class="user-component__title">임규성</h4>
+                    <h6 class="user-component__subtitle">This text whatever</h6>
+                </div>
+            </div>
+            <div class="user-component__column"></div>
+        </div>
+
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__btn">
@@ -53,6 +81,8 @@ hello this is friends.
                         <i class="fas fa-ellipsis-h fa-2x"></i></a></li>
             </ul>
         </nav>
+
+
 
 
 <script src="https://kit.fontawesome.com/6478f529f2.js"
@@ -82,4 +112,16 @@ crossorigin="anonymous">
             class를 정해주는데 nav element에 class를 nav로 줄 수 있음
 
             이후 components 폴더에 css파일 생성하기
+    -->
+
+<!--    6.14
+            header 만들기
+            span*3 하면 span이 3개 생성됨
+            components/screen-header.css 파일 생성
+    -->
+
+<!--    6.16 
+            .user-component__column*2 라고 입력시
+            div에 클래스 user-component__column으로 2개가 만들어짐 (단축키)
+
     -->
