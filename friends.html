@@ -51,17 +51,48 @@
             <i class="fas fa-chevron-right fa-xs"></i>
         </a>
 
+    <main class="friends-screen">
         <div class="user-component">
             <div class="user-component__column">
-                    <img class="user-component__avatar" 
-                    src="https://img.theqoo.net/img/BtLGd.jpg" />
+                    <img class="user-component__avatar 
+                    user-component__avatar--xl" 
+                    src="https://img.theqoo.net/img/BtLGd.jpg"/>
+
                 <div class="user-component__text">
                     <h4 class="user-component__title">임규성</h4>
-                    <h6 class="user-component__subtitle">This text whatever</h6>
+                    <!-- <h6 class="user-component__subtitle">This text whatever</h6> -->
                 </div>
             </div>
-            <div class="user-component__column"></div>
         </div>
+
+        <div class="friends--screen__channel">
+            <div class="friends--screen_channel-header">
+                <span>Channel</span>
+                <i class="fas fa-chevron-up fa-xs"></i>
+            </div>
+
+    <div class="user-component">
+        <div class="user-component__column">
+        
+            <img class="user-component__avatar
+             user-component__avatar--sm" 
+            src="https://img.theqoo.net/img/BtLGd.jpg"/>
+
+        <div class="user-component__text">
+            <h4 class="user-component__title
+            user-component__title--not-bold">Channel</h4>
+
+        </div>
+    </div>
+
+<div class="user-component__column">
+        <span>2</span>
+        <i class="fas fa-chevron-right fa-xs"></i>
+</div>
+
+    </div>
+        </div>
+    </main>
 
         <nav class="nav">
             <ul class="nav__list">
@@ -123,5 +154,16 @@ crossorigin="anonymous">
 <!--    6.16 
             .user-component__column*2 라고 입력시
             div에 클래스 user-component__column으로 2개가 만들어짐 (단축키)
+    -->
+
+<!--    6.17
+            h6는 일단 나중에 쓸 예정이니 주석처리(다른 스크린에 코드 사용예정)
+            img부분을 좀 수정해줘야 한다고 생각되면
+            user-componenet__avatar--xl 이라고 클래스를 img에 추가해준다
+            이는 modifier(변형)이다
+    -->
+
+<!--    6.18
+            다시 보고 복습하기
 
     -->

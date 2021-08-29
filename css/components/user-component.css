@@ -1,5 +1,5 @@
 .user-component {
-    display: flex;
+    justify-content: space-between;
 }
 
 .user-component,
@@ -11,7 +11,7 @@
 .user-component__avatar{
     width:70px;
     height: 70px;
-    border-radius: 27px;
+    border-radius: 30px;
     margin-right: 20px;
 }
 
@@ -26,6 +26,19 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
+.user-component__avatar--xl{
+    width: 80px;
+    height: 80px;
+}
+.user-component__avatar--sm{
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+}
+
+.user-component__title--not-bold{
+    font-weight: 400;
+}
 
 /* 6.16
     img 큰 사이즈 80x80, 작은 사이즈 60x60
@@ -43,4 +56,26 @@
     만드는 subtitle은 다른 스크린 작업 때 사용을 위해 만듦
     (반복되는 것들을 component로 만들면 작업이 쉬워지기 때문)
     *개인적으로 상태메시지처럼 이용해도 될 것 같음*
+*/
+
+/* 6.17 
+    .user-component__avatar--xl에 width와 height값을 추가해주면
+    이미지의 사이즈가 커진다
+
+    텍스트의 margin값을 변수로 저장하기 위해서
+    variables.css 안에 --horizontal-space:25px; 로 변수를 만들어준뒤
+    25px값을 넣어준다 이후 var(--horizontal-space)를 이용하면 25px의 값 사용가능
+    -> screen-header.css 파일에 paddimg를 이 방식으로 바꿔줌
+
+    이제 프로필과 채널의 박스를 하나의 박스로 묶어줄 것
+    가장 좋은 방법은 태그 안으로 넣어주는 것
+    
+    <main class="friends-screen">
+    두 박스의 내용
+    </main>
+
+    이후 friends.css 파일에서 적용값 만듦
+
+    헤더와 같은 padding 값을 갖게된다면 잘 적용된 것
+
 */
