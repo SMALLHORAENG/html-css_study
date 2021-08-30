@@ -15,6 +15,23 @@
        padding: 0px var(--horizontal-space);
 }
 
+.friends-screen__channel{
+       margin-top: 25px;
+       border-top: 1px solid rgba(0, 0, 0, 0.2);
+       padding-top: 15px;
+   }
+   
+   .friends-screen__channel-header{
+       margin-bottom: 30px;
+       display: flex;
+       justify-content: space-between;
+       color: rgba(0, 0, 0, 0.5);
+   }
+   
+   .user-component__column:last-child{
+       color: rgba(0, 0, 0, 0.5);
+   }
+
 /* 6.15
        html 파일에는 <a>를 통해서 작성하고
        id를 이용해서 만들어준다
@@ -24,3 +41,6 @@
        style.css 파일에 body에서 폰트의 색상을 nav-bar에서 가져와 동일하게 해줌
 */
 
+/* 6.18
+       header과 글자 색 같게 하기위해서 설정해줌 (다른 스크린에도 사용예정)
+*/

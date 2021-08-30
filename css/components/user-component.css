@@ -1,4 +1,4 @@
-.user-component {
+.user-component{
     justify-content: space-between;
 }
 
@@ -40,6 +40,7 @@
     font-weight: 400;
 }
 
+
 /* 6.16
     img 큰 사이즈 80x80, 작은 사이즈 60x60
 
@@ -77,5 +78,16 @@
     이후 friends.css 파일에서 적용값 만듦
 
     헤더와 같은 padding 값을 갖게된다면 잘 적용된 것
+*/
 
+/* 6.18
+    user-component는 friends.html에서 봤듯이 
+    두 column을 갖고 있음
+    1. 사진, 이름
+    2. 숫자2 (span)
+    이 두개를 분리하기 위해서 .user-component{
+        justify-content: space-between; } 을 기존 클래스 설정값 위에 적용하면
+    숫자2가 분리되서 적용됨
+
+    이후 friends.css 파일에 작성
 */
