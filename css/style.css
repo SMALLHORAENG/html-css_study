@@ -20,6 +20,10 @@ body{
     color: #2e363e;
 }
 
+.main-screen{
+        padding: 0px var(--horizontal-space);
+}
+
 /* style.css는
 모든 스크린에 적용될 수 있는 스타일을 넣어두는 것 */
 
