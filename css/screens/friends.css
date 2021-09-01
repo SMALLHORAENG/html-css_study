@@ -4,7 +4,8 @@
     background-color: #fafafa;
     padding: 10px 0px;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: -15px;
 }
 
 #friend-display-link i{
@@ -28,9 +29,9 @@
        color: rgba(0, 0, 0, 0.5);
    }
    
-   .user-component__column:last-child{
+   /* .user-component__column:last-child{
        color: rgba(0, 0, 0, 0.5);
-   }
+   } */
 
 /* 6.15
        html 파일에는 <a>를 통해서 작성하고
@@ -43,4 +44,9 @@
 
 /* 6.18
        header과 글자 색 같게 하기위해서 설정해줌 (다른 스크린에도 사용예정)
+*/
+
+/* 6.20
+       margin값이 너무 커서 margin-top: -10px; 줌
+       (screen-header.css 에 margin-bottom을 추가한 것이 너무 커서)
 */

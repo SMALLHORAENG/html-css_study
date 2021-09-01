@@ -55,7 +55,10 @@
                     <h6 class="user-component__subtitle">pls my kokoa accounts info</h6>
                 </div>
             </div>
-            <div class="user-component__column"></div>
+            <div class="user-component__column">
+                <span class="user-component__time">22:35</span>
+                <div class="badge">1</div>
+            </div>
         </div>
     </main>
 
@@ -66,7 +69,7 @@
                         <i class="far fa-user fa-2x"></i></a></li>
                 <li class="nav__btn">
                     <a class="nav__link" href="chats.html">
-                        <span class="nav__notification">1</span>
+                        <span class="nav__notification badge">1</span>
                         <i class="fas fa-comment fa-2x"></i>
                         </i></a></li>
                 <li class="nav__btn">
@@ -107,5 +110,35 @@ crossorigin="anonymous">
         screen-header 클래스에 margin-bottom: 15px를 준다
         이건 모든 screen-header 클래스가 들어간 부분에 margin-bottom
         적용된 것
-
 -->
+
+<!-- 6.20
+        남은 column에 span해서 시간 넣어주고
+        components에 badge.css파일 생성해줌
+        nav-bar.css 파일과 position이 absolute 라는 점이 다름
+
+        nav-bar.css 파일에 nav__notification 클래스에
+        position:absolute 위 내용을 복사해서
+        badge.css 에 badge라는 클래스로 선언하고 내용 넣어주고
+        nav_notification 클래스가 들어간곳에 badge를 넣어줘서
+        두개의 class를 갖게 해준다
+
+        nav_notification은 position 값을 갖고 left와 bottom에 값을 가짐
+
+        시간을 넣어준 column 에서 span 아래
+        div를 넣어주고 class는 badge로 해주면 알림 아이콘 뜸
+        
+        시간을 넣어준 span에 class를 넣어주고 margin-bottom을 줌
+        (class ="user-component__time")
+
+        .user-component__column:last-child
+        에서 display를 flex로 하고 flex-direction을 column 해주고
+        align-item을 flex-end 해준다
+        그러면 friends.html의 span이 영향을 받는데
+        그걸 아래 코드처럼 div를 써줘서 묶어주면 영향을 받지않는다
+                
+        <div>
+            <span>2</span>
+            <i class="fas fa-chevron-right fa-xs"></i>
+        </div>
+ -->

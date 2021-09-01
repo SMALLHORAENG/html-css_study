@@ -1,0 +1,33 @@
+.find-icons{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.find-icons__icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.find-icons__icon i{
+    font-size: 35px;
+}
+
+.find-icons__icon span{
+    margin-top: 18px;
+}
+
+
+/* 6.21
+    flex-direction: column은 다음줄에 오는 것
+    row는 옆에 오는 것
+    (flex-direction을 설정해줬으니 교차축과 주축이 바뀜)
+    column 해줬기 때문에 메인이 세로 , 교차축이 가로
+
+    border(경계선)을 만드는 것 위에 아이콘에 넣어주거나
+    아래 추가적인 텍스트에 넣어줘도 됨
+    이 예제에는 아이콘에 넣어줌
+
+    border을 많이 사용하니 6.22에서는 변수로 만듦
+*/
