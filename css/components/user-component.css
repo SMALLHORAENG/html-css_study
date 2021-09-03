@@ -8,6 +8,9 @@
     align-items: center;
 }
 
+
+/* text->title 부분 배열문제 찾아서 해결해보기 */
+
 .user-component__avatar{
     width:70px;
     height: 70px;
