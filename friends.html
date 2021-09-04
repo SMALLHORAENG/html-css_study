@@ -63,13 +63,24 @@
                     <!-- <h6 class="user-component__subtitle">This text whatever</h6> -->
                 </div>
             </div>
-            <!-- <div class="user-component__column"></div> -->
+            <div class="user-component__column"></div>
         </div>
+
+        <!-- 6.16
+            이미지 column과 텍스트(이름)인 column으로 총 2개의 column이 있음
+            (2개의 column을 갖고있는 container이 2개 있음
+            채널부분 이미지와텍스트 1개,  우측 2와 아이콘 1개)
+            위 avatar부분도 동일
+            첫 column은 큰 column 1개만 있어도 됨
+            그 안에 img와 text를 위한 column 2개를 만들면 됨
+
+            space-between을 해주기 위해서 div를 둔다고 생각하자(66번째 줄)
+        -->
 
 
         <!-- 경계선 작업 및 채널은 아래영역 -->
 <div class="friends-screen__channel">
-            <div class="friends-screen_channel-header">
+            <div class="friends-screen__channel-header">
                 <span>Channel</span>
                 <i class="fas fa-chevron-up fa-xs"></i>
             </div>
@@ -92,12 +103,9 @@
         </div>
 
         <div class="user-component__column">
-            <div>
             <span>2</span>
             <i class="fas fa-chevron-right fa-xs"></i>
-            </div>
         </div>
-
     </div>
 </div>
     </main>

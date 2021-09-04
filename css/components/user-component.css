@@ -8,12 +8,24 @@
     align-items: center;
 }
 
-
 /* text->title 부분 배열문제 찾아서 해결해보기 
 screen-header 부분으로 수정 
 
 <div class="user-component__column"></div> 주석 풀어주면 해결됨
-6.15 확인하고 이해하기
+
+user-component__column은 사진과 텍스트의 flex 설정 된 부모요소임
+6.15 ~ 6.18
+
+column을 분리시켜야함
+하나는 이미지와 텍스트 하나는 2와 화살표
+
+display: flex로 정렬되있는거 분리하는 방법은
+맨 위에
+.user-component{
+    justify-content: space-between;
+}
+이와같이 해주면 된다
+
 */
 
 .user-component__avatar{
@@ -24,7 +36,6 @@ screen-header 부분으로 수정
 }
 
 .user-component__title{
-    
     font-weight: 600;
     font-size: 20px;
 }
@@ -51,10 +62,18 @@ screen-header 부분으로 수정
 
 .user-component__column:last-child{
     color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    /* display: flex;
+    justify-content: space-between; */
+    
 }
+
+/*  여기서 last-child 부분에 flex등(주석처림 된 부분)을 준 이유는
+    우측으로 2와 화살표를 이동시켜 space-between으로 배치시키기 위함이였음
+    이미 두번째 column부분인 user-component부분이 flex 되있기 때문에
+    flex 해줄 필요가 없고 space-between도 이미 위에 되어있음 
+    
+    위에 header부분은 friends.css 부분에 flex가 되어있다
+    */
 
 .user-component__time{
     display: block;
