@@ -15,7 +15,16 @@
     margin-left: 25px;
 }
 
+/* 아래 부분을 통해 채널과 아이콘 간격을 두고 배치 */
 
+.friends-screen_channel-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.friends-screen_channel-header span{
+    padding-bottom: 15px;
+}
 
 /* 6.14 
         font-weight: 600을 통해 글씨를 굵게 만들어줌

@@ -9,7 +9,12 @@
 }
 
 
-/* text->title 부분 배열문제 찾아서 해결해보기 */
+/* text->title 부분 배열문제 찾아서 해결해보기 
+screen-header 부분으로 수정 
+
+<div class="user-component__column"></div> 주석 풀어주면 해결됨
+6.15 확인하고 이해하기
+*/
 
 .user-component__avatar{
     width:70px;
@@ -19,6 +24,7 @@
 }
 
 .user-component__title{
+    
     font-weight: 600;
     font-size: 20px;
 }
@@ -54,6 +60,9 @@
     display: block;
     margin-bottom: 10px;
 }
+
+
+
 
 /* 6.16
     img 큰 사이즈 80x80, 작은 사이즈 60x60
