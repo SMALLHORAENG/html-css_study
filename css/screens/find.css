@@ -39,6 +39,65 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
+/* 6.23  viow color themes가 색상이 이쁨(flat)*/
+.open-post__header {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.open-post__header span{
+    opacity: 0.6;
+}
+
+.open-post{
+    display: flex;
+}
+
+.open-post__title{
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.open-post__hashtags{
+    text-transform: uppercase;  /* 모든 글자를 대문자로 만들어줌 */
+    opacity: 0.6;
+}
+
+.open-post__members {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.open-post__members img{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.open-post__members-count{
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.open-post__members .divider{  /*open-post__members 안에 .divider만 적용*/
+    width: 2px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.open-post__members-status {
+    color: #ffb0e0;
+}
+
+/* 위 코드는 스크린의 좌측 해쉬태그와 아이콘 멤버수 등등을 표현함 */
+
+/* 6.24 */
+
 /* 6.21
     flex-direction: column은 다음줄에 오는 것
     row는 옆에 오는 것
