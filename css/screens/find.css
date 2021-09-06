@@ -53,6 +53,8 @@
 
 .open-post{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .open-post__title{
@@ -94,9 +96,46 @@
     color: #ffb0e0;
 }
 
+.open-post__photo{
+    position: relative;
+}
+
+.open-post__photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;   
+}
+
+.open-post__heart-count{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 20px ;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 17px;
+}
+
+.open-post__heart-count span{
+    margin-left: 3px;
+
+}
+
+
+
 /* 위 코드는 스크린의 좌측 해쉬태그와 아이콘 멤버수 등등을 표현함 */
 
-/* 6.24 */
+/* 6.24
+    justify-content: space-between;
+    align-items: center; 
+    이 조합은 매우 많이쓰는 조합
+
+    relative (photo)
+    absolute (heart-count)
+*/
 
 /* 6.21
     flex-direction: column은 다음줄에 오는 것
