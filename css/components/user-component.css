@@ -83,6 +83,9 @@ display: flex로 정렬되있는거 분리하는 방법은
 
 
 
+
+
+
 /* 6.16
     img 큰 사이즈 80x80, 작은 사이즈 60x60
 
@@ -133,3 +136,8 @@ display: flex로 정렬되있는거 분리하는 방법은
 
     이후 friends.css 파일에 작성
 */
+
+.user-component__text h6 i{
+    padding-left: 3px;
+    color: rgba(250, 128, 114, 0.9);
+}

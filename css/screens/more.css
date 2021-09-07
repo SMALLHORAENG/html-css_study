@@ -1,0 +1,33 @@
+.more-screen .icon-row{
+    margin-top: 35px;
+}
+
+
+.more-suggestions {
+    margin-top: 50px;
+    border-top: var(--main-border);
+    padding-top: 40px;
+}
+
+.more-suggestions__title{
+    margin-bottom: 30px;
+}
+
+.more-suggestions__icon{
+    display: flex;
+    justify-content: space-between;
+} 
+/* 아이콘을 위치에 맞게 위치시킴 */
+
+.more-suggestions__icon-image{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+} 
+/* 아이콘 아래 텍스트 위치하게 함 */
+
+/* 6.25
+    more-screen과 icon-row클래스 모두 적용시키는 방법
+
+
+*/
