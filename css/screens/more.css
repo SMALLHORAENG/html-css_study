@@ -2,7 +2,6 @@
     margin-top: 35px;
 }
 
-
 .more-suggestions {
     margin-top: 50px;
     border-top: var(--main-border);
@@ -13,21 +12,59 @@
     margin-bottom: 30px;
 }
 
-.more-suggestions__icon{
+/* .more-suggestions__icon{
     display: flex;
     justify-content: space-between;
-} 
+}  */
 /* 아이콘을 위치에 맞게 위치시킴 */
 
-.more-suggestions__icon-image{
+/* .more-suggestions__icon-image{
     display: flex;
     flex-direction: column;
     align-content: center;
-} 
+}  */
 /* 아이콘 아래 텍스트 위치하게 함 */
+
+/* 주석 부분은 스스로 해본 것 하지만 스크린샷처럼 하기 위해서는 아래처럼 할 것*/
+
+.more-suggestions__icons{
+    display: flex;
+}
+
+.more-suggestions__icon {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more-suggestions__icon-image{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-suggestions__icon-image i{
+    font-size: 32px;
+    color: white;
+} 
+
 
 /* 6.25
     more-screen과 icon-row클래스 모두 적용시키는 방법
-
-
+    .more-screen .icon-row{
+    margin-top: 35px; }
 */
+
+/* 6.26
+    .more-suggestions__icons 가 flex container이 되야함
+    중앙 정렬하기 좋은것은 flexbox
+    flex-direction과 align-items:center;을 해줘서 아이콘을 정렬해줌
+*/
+
+/* 6.26안에 settings.html 부분이 들어감 */
