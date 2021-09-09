@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.alt-header__column{
+    width: 33%;
+}
+
 .alt-header__title{
     font-size: 28px;
     font-weight: 600;
@@ -15,11 +19,30 @@
     margin-right: auto;
 }
 
+.alt-header__column:nth-child(2){
+    text-align: center;
+}
+
 .alt-header__column:last-child{
     margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.alt-header__column span{
-    padding-right: 15px;
+.alt-header__column span:last-child{
+    margin-left: 20px;
 }
 
+/* 6.29
+        alt-header__column 으로 width값을 33% 줘서 아이콘,타이틀 들이 width값 33%로 가짐
+        결론적으로 각 위치 공간이 33%의 width가 되서 정렬이 잘 됨
+
+        alt-header__column:nth-child(2) 안에 center을 해줬기 때문에
+        가운데 타이틀 부분이 정 중앙에 위치하게 됨(텍스트)
+
+        alt-header__column:last-child 부분에
+        display: flex와 justify-content 값을 flex-end로 해준 결과
+        아이콘들이 우측으로 정렬되서 더 보기 좋아짐
+
+        위 내용은 css가 더욱 이쁘게 보이게 하기위한 꿀팁이다!
+*/

@@ -1,9 +1,126 @@
 #chat-screen{
-    background-color: #abc1d1;   
+    background-color: #abc1d1;
+    height: 1200vh;   
+}
+
+#chat-screen .alt-header,
+#chat-screen .statusbar{
+    top:0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #abc1d1;
+}
+
+#chat-screen .statusbar{
+    z-index: 2;
+}
+
+#chat-screen .alt-header{
+    top: 10px;
+    z-index: 1;
+}
+
+.main-chat{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 6.28
     백그라운드 색상만 바꿈 두번쨰 파트부터 본격적
 */
 
-/* 6.29 9.9에 할 예정 */
+/* 6.29
+    alt-screen-header.css에서 아이콘 margin-left 값 20px 줌
+
+    #chat-screen .alt-header{
+        안에 fixed인 position은 화면을 스크롤해도 그 위치가 변하지 않는 것
+        width를 해주면 title과 아이콘들이 제 위치에 배치됨(fixed를 해줬기 때문에 해줘야 함)
+        box-sizing값을 border-box로 해줬기 때문에 아이콘이 밖으로 벗어나지 않게 됨
+        * #chat-screen .alt-header은 id chat-screen 곳에 alt-header인 클래스를
+        의미함 *
+
+    alt-screen-header.css 에 꿀팁을 추가함 (텍스트와 아이콘 위치 정확하게 하기)
+    
+    alt-header이 statusbar를 가리면 z-index라는 속성을 통해 수정
+    z-index는 div가 있는 위치가 맨 앞에서부터 몇 번째인지 나타냄
+    즉, layer의 순서가 몇번쨰인지 나타내는 것
+    display , position 작업시 layer 갖는 것
+    기본값은 0
+    z-index는 포토샵의 layer와 같은 느낌이고
+    절대적인 위치 absolute position이나 
+    고정된 위치 fixed position에 대해서 설정 가능
+    
+    사용자와 가까움 0 사용자와 멀어짐 / 숫자가 높을수록 가깝게 위치한다
+    3   2   1       0       -1  -2  -3
+
+    321 0 -1-2-3 이라면 3이 가장 사용자와 가까운 가장 위의 layer -3은 가장 먼 layer
+ */
+
+.chat__timestemp{
+    color: white;
+    background-color: #92a4b2;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+
+/* 6.30
+    timestemp 부분 완성
+*/
+
+.message-row{
+    width: 100%;
+    display: flex;
+}
+
+.message-row img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 3px;
+    margin-right: 15px;
+}
+
+.message__author{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.message__info{
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__bubble{
+    background-color: white;
+    padding: 13px;
+    font-size: 18px;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    margin-right: 5px;
+}
+
+.message__time{
+/* .message__author{ */
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+/* 6.31
+    message-row부분을 display flex를 해주므로 요소들이 옆에 오게됨
+
+    message-author은 span이므로 display를 block로 변경해줘야 함
+
+    말풍선(bubble)옆 시간(time)이 말풍선 하단에 위치하게 해야 함
+    말풍선과 시간에 해당하는 container인 info가 flex를 갖게할 것
+    이후 align-items을 flex-end
+
+    border-top-left-radius: 0px; 해주면 말풍선 좌측 상단은 각지게 됨(radius값0)
+*/
