@@ -76,6 +76,7 @@
 .message-row{
     width: 100%;
     display: flex;
+    margin-bottom: 25px;
 }
 
 .message-row img{
@@ -123,4 +124,115 @@
     이후 align-items을 flex-end
 
     border-top-left-radius: 0px; 해주면 말풍선 좌측 상단은 각지게 됨(radius값0)
+*/
+
+.message-row--own {
+    justify-content: flex-end;
+}
+
+.message-row--own .message__bubble{
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+/*.message-row--own .message__bubble {
+    order: 1;
+}
+.message-row--own .message__time {
+    order: 0;
+}*/
+
+.message-row--own .message__info{
+    flex-direction: row-reverse;
+}
+
+/* 6.32
+    flex children에만 order이 적용됨
+    숫자가 클수록 우측에 위치함
+    (순서를 바꾸는 방식 1)
+
+    .message-row--own .message__info {
+        flex-direction: row-reverse; }
+        를 이용해도 위치 바뀜
+    (순서를 바꾸는 방식 2) 
+    .message-row--own인 modifier기준으로 변경
+*/
+
+.reply {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.reply .reply__column:first-child{
+    width: 10%;
+}
+.reply .reply__column:last-child{
+    width: 90%;
+    position: relative;
+}
+
+.reply i{
+    opacity: 0.5;
+}
+
+.reply input{
+    padding: 14px;
+    width: 100%;
+    border: var(--main-border);
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.reply__column:last-child > i ,
+.reply__column:last-child button {
+    position: absolute;
+    right: 3px;
+    top: 2px;
+}
+
+.reply__column:last-child > i {
+    right: 50px;
+    top: 8px;
+}
+
+.reply__column button{
+    background-color: var(--yellow);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.reply__column button:focus,
+.reply__column button:active{
+    outline: none;
+}
+
+.reply__column button i{
+    opacity: 1;
+}
+
+/* 6.33
+    .reply input{
+    height: 30px;
+    width: 100%;
+    } 이 코드는 안된다 왜냐? input이 column안에 있는데
+    column은 width를 갖고있지 않음
+
+    위 수정된 코드를 보면 먼저 column에 width를 줘야함
+    그 다음에야 input에 width를 줄 수 있음
+
+    두 아이콘은 absolute로 할 것
+    아이콘, 버튼은 input의 위에 올릴 것
+    input 부분을 relative로 만들어주면 됨(position)
 */
