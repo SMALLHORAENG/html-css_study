@@ -123,7 +123,6 @@
 
 .open-post__heart-count span{
     margin-left: 3px;
-
 }
 
 
@@ -162,3 +161,35 @@
     span 부분은 inline이기 때문에 block로 바꿔줘야 text-align이 적용됨
 */
 
+
+@keyframes heartBeat {
+    0%{
+        color: white;
+        transform: none;
+    }
+    50%{
+        color: red;
+        transform: scale(1.5);
+    }
+    100%{
+        color: white;
+        transform: none;
+    }
+}
+
+.open-post__heart-count:hover i{
+    will-change: transform;
+    animation: heartBeat 1s linear infinite;
+}
+
+/* 6.37
+    하트 아이콘 심장박동수 처럼 커지고 작아지면서 색 변하게 한 것
+
+    will-change = 브라우저에게 뭔가가 바뀔거라고 말해줌
+    애니메이션을 더 낫게 바꿔줌 (브라우저를 돕는 행위)
+    scale 값을 1.5로 하다보니 값이 작아서 흔들리게 보임
+    그래서 will-change를 해주는것이 도움이 됨
+    - 그래픽카드를 이용해 애니메이션을 가속화 함 -
+
+    will-change는 항상 사용하는것 아님
+*/
