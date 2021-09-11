@@ -20,11 +20,78 @@
     color: #2e363e;
 }
 
+@keyframes notificationAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotateY(360deg);
+    }
+    100%{
+        transform: none;
+    }
+}
+
+.nav__btn{
+    transform: translateY(50px);
+    animation: appearBtnAnimation 0.3s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes appearBtnAnimation{
+ from{
+    opacity: 0;
+ }
+ to{
+    transform: none;
+    opacity: 1;
+ }
+    
+}
+
+.nav__btn:nth-child(2){
+    animation-delay: 0.3s;
+}
+.nav__btn:nth-child(3){
+    animation-delay: 0.6s;
+}   
+.nav__btn:last-child{
+    animation-delay: 0.9s;
+}
+
+/* 6.36
+    Y축에서 translate 하기위해서 transform: translateY(-5px);
+    이후 아래 클래스 안에 적용시켜주기
+
+    translateY는 위 아래로 움직이게 해줌
+
+    rotateY(180deg)는 180도 도는 것 의미 (transform과 연결하여 사용)
+
+
+    appearBtnAnimation
+    transform: translateY(50px) - 이 값에 to를 none주면
+    아래에서 nav-bar 부분이 올라오는 애니메이션 됨
+
+    하나씩 올라오게 하기위해 각자 delay를 걸어줌
+    모두 같은 포지션에서 시작해서 별로임
+    이를 보완해주는것
+    ->   nav__btn 부분에 transform: translateY(50px);와
+    opacity: 0;을 해주면 더 자연스럽다
+    (원래 포지션은 아이콘이 나오는 상태인데
+    이걸 포지션을 바 아래로 해주고 opacity를 줘서 해주면
+    없다가 생기는 애니메이션으로 됨 그래서 더 자연스러움)
+    - 만약 btn부분에 transform값을 넣어주지 않으면
+      버튼이 있다가 사라졌다 다시 생겨서 부자연스러움 -
+
+    애니메이션의 반복값에서 마지막 값 기억하기위해 forward 해줌
+*/
+
 .nav__notification {
     position: absolute;
     left: 15px;
     /* top: -10px; */
     bottom: 15px;
+    animation: notificationAnimation 2s ease-in-out infinite;
 }
 
 
