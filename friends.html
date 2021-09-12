@@ -140,7 +140,7 @@
 </div>
 
 <div id = "no-mobile">
-    <span>Your Screen is super Big</span>
+    <span>Your Screen is to Big</span>
 </div>
 
 <!-- 7.0
@@ -151,8 +151,38 @@
         experimental branch는 main(master) 앞에 하나의 commit가 붙은 상태임(하나만 추가했음)
 
         수정이 끝나서 합치는 방법은
-        Branch -> Merge into Current Branch -> 생성한 branch 누르고 
+        Branch -> Merge into Current Branch -> 생성한 branch 누르고 -> create a merge commit하면 
+        합쳐진다 (끝)
 -->
+
+<!-- 7.1
+        특별한 이름이 붙여진 특별한 brach를 가지고 있으면 
+        github에서 공짜로 static 호스팅을 할 수 있도록 해줌
+
+        (누구나 자신의 웹사이트를 무료로 업로드할 수 있다) 단 static 사이트에 한해 github에서 url제공
+        static website는 그냥 html, css, js로만 이루어진 사이트를 의미
+
+        front-end만 가능 back-end는 다룰 수 없음
+
+        대신 룰 있음
+        1. branch를 만들어야 함 'gh-pages' 라는 이름으로 만들어야 이용가능 (필수사항)
+        만일 1번 룰대로 하지 않으면 웹사이트 공개(publish)가 안됨
+        저장소 public로 해야함 아니면 공개가 안됨 (소문자로 branch를 만들어야함)
+
+        이렇게 branch를 만든 뒤 publish branch 버튼을 눌러주면 됨
+
+        우리의 url은 내 저장소에 들어가고 (repository 주소)
+        environments에서 github-pages 누르면 deployments가 있음
+        옆에 view deployment를 클릭하면 내가 만든 페이지를 보여줌
+
+        branch 확인
+        github 홈페이지에서 go to file 부분 아래에 commit들 옆에 branches가 있음(이건 확인용)
+
+        URL = 유저네임.github.io/저장소이름 
+
+        이렇게 하면 무료 사이트를 가질 수 있고 다른 사용자들에게 보여줄 수 있음 (포트폴리오사이트 가능)
+        
+ -->
 
 
 <script src="https://kit.fontawesome.com/6478f529f2.js"
