@@ -1,11 +1,13 @@
 .user-component{
-    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
 }
 
 .user-component,
-.user-component__column:first-child {
+.user-component__column:first-child{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 /* text->title 부분 배열문제 찾아서 해결해보기 
@@ -60,7 +62,9 @@ display: flex로 정렬되있는거 분리하는 방법은
     font-weight: 400;
 }
 
-.user-component__column:last-child{
+.user-component__column:last-child,
+.user-component__column:nth-child(2),
+.user-component__column:nth-child(4){
     color: rgba(0, 0, 0, 0.4);
     /* display: flex;
     justify-content: space-between; */
