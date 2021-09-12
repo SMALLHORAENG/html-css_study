@@ -326,3 +326,28 @@
 
     *translate의 값은 +값은 아래로 이동, -값은 위로 이동이다*
 */
+
+
+/* 7.0
+        웹 사이트 배포전에 할 것
+        git의 branch
+        개념설명 : git에서 코드들의 평행세계라 볼 수 있음
+
+        git은 어떤 commit이라도 받을 수 있게 해줌
+        master branch와는 또 다른 프로젝트를 어떤 commit 이라도 거기서 시작가능
+        대부분의 사람들은 master branch에 stable(잘 작동하는 것으로 어느정도 검증 된)코드를 올림
+
+        https://hoony-gunputer.tistory.com/entry/9-git-branch (사진보며 이해)
+        사진에서 보면 하나의 commit에서 세갈래로 나눠짐 branch1, master, branch2
+        각자 다른 역할을 하기 위해서 사용
+        따로 만들었다가 합치는것도 가능함 (따로 실험하기위해 새로운 branch를 만들었다던가)
+
+        실험 또는 새로운 기능 추가할 떄 새로운 branch를 만듦
+        (평행세계를 만드는 것과 비슷함)
+        
+        작업을 다 하면 merge하면 됨 (달라진 것 합치는 것)
+
+        github desktop에서 branch 를 새로 만들어준다 (branch 명 : experimental)
+        이 안에는 main의 history가 담겨있음
+        
+*/
