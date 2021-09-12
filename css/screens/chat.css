@@ -327,10 +327,6 @@
     *translate의 값은 +값은 아래로 이동, -값은 위로 이동이다*
     
 <<<<<<< Updated upstream
-=======
-
-
-
 /* 7.0
         웹 사이트 배포전에 할 것
         git의 branch
@@ -351,8 +347,4 @@
         작업을 다 하면 merge하면 됨 (달라진 것 합치는 것)
 
         github desktop에서 branch 를 새로 만들어준다 (branch 명 : experimental)
-        이 안에는 main의 history가 담겨있음
-
-        friends.html로 이동
-
->>>>>>> Stashed changes
+*/
