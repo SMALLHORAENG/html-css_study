@@ -7,4 +7,16 @@ justify-content: center;
 align-items: center;
 color: white;
 font-weight: 600;
+margin-left: 5px;
+
+animation: badgeAnimation 0.8s infinite;
+}
+
+@keyframes badgeAnimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
