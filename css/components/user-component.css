@@ -2,11 +2,30 @@
     justify-content: space-between;
 }
 
-.user-component,
-.user-component__column:first-child {
+/* .user-component__column:first-child,
+.user-component__column:nth-child(3),
+.user-component__column:nth-child(5){
     display: flex;
     align-items: center;
+    justify-content: space-between;
+} */
+
+
+.user-component__column {
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
+
+.user-component__grow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+
 
 /* text->title 부분 배열문제 찾아서 해결해보기 
 screen-header 부분으로 수정 
@@ -60,12 +79,8 @@ display: flex로 정렬되있는거 분리하는 방법은
     font-weight: 400;
 }
 
-.user-component__column:last-child{
-    color: rgba(0, 0, 0, 0.4);
     /* display: flex;
     justify-content: space-between; */
-    
-}
 
 /*  여기서 last-child 부분에 flex등(주석처림 된 부분)을 준 이유는
     우측으로 2와 화살표를 이동시켜 space-between으로 배치시키기 위함이였음
@@ -76,15 +91,9 @@ display: flex로 정렬되있는거 분리하는 방법은
     */
 
 .user-component__time{
-    display: block;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
-
-
-
-
-
-
 
 /* 6.16
     img 큰 사이즈 80x80, 작은 사이즈 60x60
@@ -137,7 +146,19 @@ display: flex로 정렬되있는거 분리하는 방법은
     이후 friends.css 파일에 작성
 */
 
-.user-component__text h6 i{
-    padding-left: 3px;
-    color: rgba(250, 128, 114, 0.9);
+.user-component__column i,
+.user-component__column span{
+    padding-right: 3px;
+    color: rgba(0, 0, 0, 0.3);
 }
+
+    @keyframes badgeAnimation {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+
